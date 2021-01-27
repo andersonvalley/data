@@ -7,6 +7,12 @@ $maxwidth: 1400px;
 $minwidth: 320px;
 $maxwidthcontainer: 1200px;
 
+// Цвет
+
+$malina: #C81F56;
+$blacktext: #020202;
+
+
 *,
 *::before,
 *::after {
@@ -14,7 +20,7 @@ $maxwidthcontainer: 1200px;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 

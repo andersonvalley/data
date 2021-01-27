@@ -10,11 +10,11 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  
+
   &__logo {
     display: flex;
     align-items: center;
-    p  {
+    p {
       color: $malina;
       font-size: 22px;
       font-weight: regular;
@@ -32,5 +32,43 @@ header {
     }
     display: flex;
     align-items: center;
+  }
+  &__burger {
+    display: none;
+  }
+}
+
+
+@media(max-width: 766px) {
+  .header {
+    &__burger {
+      display: block;
+      flex: 0 0 40px;
+      position: relative;
+      height: 30px;
+      // background: #eee;
+      right: 20px;
+      span {
+        width: 30px;
+        height: 2px;
+        top: 13px;
+        position: absolute;
+        background: #000;
+        right: 5px;
+      }
+      span::before, span::after {
+        width: 30px;
+        height: 2px;
+        content: "";
+        position: absolute;
+        background: #000;
+      }
+      span::before {
+        top: 6px;
+      }
+      span::after {
+        top: -6px;
+      }
+    }
   }
 }

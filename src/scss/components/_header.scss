@@ -4,6 +4,7 @@ header {
   left: 0;
   background: #fff;
   width: 100%;
+  border-bottom: 1px solid transparent;
 }
 .header {
   display: flex;
@@ -25,9 +26,32 @@ header {
     li {
       margin-left: 29px;
       a {
+        position: relative;
         color: $blacktext;
         font-size: 15px;
         font-weight: medium;
+
+
+
+        &:after{
+          content: "";
+          width: 0;
+          height: 2px;
+          background-color: #000;
+
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          z-index: 1;
+          transition: width .2s linear;
+        }
+
+
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
       }
     }
     display: flex;
@@ -72,3 +96,8 @@ header {
     }
   }
 }
+
+
+
+/* Styles */
+
